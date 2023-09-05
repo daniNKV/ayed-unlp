@@ -15,7 +15,7 @@ public class TestListaDeEnterosEnlazada {
         imprimirOrdenInverso(lista);
 
         System.out.println();
-        calcularMiembrosSucesionConsola(6);
+        //calcularMiembrosSucesionConsola(6);
 
         ListaDeEnterosEnlazada miembrosSucesion = calcularMiembrosSucesion(6);
         miembrosSucesion.comenzar();
@@ -48,6 +48,7 @@ public class TestListaDeEnterosEnlazada {
         ListaDeEnterosEnlazada lista;
         if (n == 1) {
             lista = new ListaDeEnterosEnlazada();
+            lista.agregarInicio(n);
             return lista;
         }
         if (n % 2 == 0) {
@@ -56,7 +57,7 @@ public class TestListaDeEnterosEnlazada {
             dato = 3 * n + 1;
         }
         lista = calcularMiembrosSucesion(dato);
-        lista.agregarInicio(dato);
+        lista.agregarInicio(n);
         return lista;
     }
 
